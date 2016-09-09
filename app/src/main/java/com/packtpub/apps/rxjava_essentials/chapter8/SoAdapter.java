@@ -1,5 +1,6 @@
 package com.packtpub.apps.rxjava_essentials.chapter8;
 
+import com.jakewharton.rxbinding.view.RxView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
@@ -25,10 +26,9 @@ import butterknife.InjectView;
 import rx.Observable;
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.android.view.ViewObservable;
 import rx.schedulers.Schedulers;
 
-import static rx.android.internal.Preconditions.checkNotNull;
+import static com.jakewharton.rxbinding.internal.Preconditions.checkNotNull;
 
 public class SoAdapter extends RecyclerView.Adapter<SoAdapter.ViewHolder> {
 
@@ -132,7 +132,7 @@ public class SoAdapter extends RecyclerView.Adapter<SoAdapter.ViewHolder> {
 
             displayWeatherInfos(user);
 
-            ViewObservable.clicks(mView)
+            RxView.clicks(mView)
                     .subscribe(onClickEvent -> {
                         checkNotNull(mProfileListener, "Must implement OpenProfileListener");
 

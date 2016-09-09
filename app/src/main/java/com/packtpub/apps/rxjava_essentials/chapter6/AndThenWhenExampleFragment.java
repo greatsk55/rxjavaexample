@@ -82,6 +82,7 @@ public class AndThenWhenExampleFragment extends Fragment {
 
         Observable<Long> tictoc = Observable.interval(1, TimeUnit.SECONDS);
 
+
         Pattern2<AppInfo, Long> pattern = JoinObservable.from(observableApp).and(tictoc);
         Plan0<AppInfo> plan = pattern.then(this::updateTitle);
         JoinObservable

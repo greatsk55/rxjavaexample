@@ -15,6 +15,13 @@ public class OpenWeatherMapApiManager {
 
     private final OpenWeatherMapService mOpenWeatherMapService;
 
+    public static OpenWeatherMapApiManager getInstance(){
+        if( instance == null){
+            instance = new OpenWeatherMapApiManager();
+        }
+        return instance;
+    }
+
     private OpenWeatherMapApiManager() {
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint("http://api.openweathermap.org")

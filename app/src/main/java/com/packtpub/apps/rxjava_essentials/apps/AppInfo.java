@@ -26,6 +26,12 @@ public class AppInfo implements Comparable<Object> {
     public String getIcon(){
         return mIcon;
     }
+    public void setName(String name){
+        mName = name;
+    }
+    public void setIcon(String icon){
+        mIcon = icon;
+    }
 
     @Override
     public int compareTo(Object another) {

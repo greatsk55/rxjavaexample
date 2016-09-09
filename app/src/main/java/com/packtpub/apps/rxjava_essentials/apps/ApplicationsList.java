@@ -21,6 +21,9 @@ public class ApplicationsList {
     public void setList(List<AppInfo> list){
         mList = list;
     }
+    public List<AppInfo> getList(){
+        return mList;
+    }
 
     public static ApplicationsList getInstance() {
         return ourInstance;
