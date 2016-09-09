@@ -18,6 +18,10 @@ public class ApplicationsList {
     private ApplicationsList() {
     }
 
+    public void setList(List<AppInfo> list){
+        mList = list;
+    }
+
     public static ApplicationsList getInstance() {
         return ourInstance;
     }

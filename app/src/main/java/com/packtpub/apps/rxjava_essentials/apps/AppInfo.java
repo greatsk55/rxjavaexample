@@ -20,6 +20,13 @@ public class AppInfo implements Comparable<Object> {
         mLastUpdateTime = lastUpdateTime;
     }
 
+    public String getName(){
+        return mName;
+    }
+    public String getIcon(){
+        return mIcon;
+    }
+
     @Override
     public int compareTo(Object another) {
         AppInfo f = (AppInfo) another;
