@@ -61,7 +61,8 @@ dependencies {
 
     compile 'com.alterego:advancedandroidlogger:1.0.3@aar'
 
-    compile 'org.projectlombok:lombok:1.14.8'
+    compile "org.projectlombok:lombok:1.16.8"
+    provided 'org.glassfish:javax.annotation:10.0-b28'
     compile 'com.jakewharton:butterknife:6.0.0'
 
     //RxAndroid
